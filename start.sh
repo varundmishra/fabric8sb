@@ -1,4 +1,4 @@
-spring_boot_jar=/tmp/weather-app-spring-1.0.0.BUILD-SNAPSHOT-nodb.jar
+spring_boot_jar=weather-app-spring-1.0.0.BUILD-SNAPSHOT-nodb.jar
 chmod +r /tmp/$spring_boot_jar
 sudo cp /tmp/$spring_boot_jar /opt/$spring_boot_jar
 sudo chmod +x /opt/$spring_boot_jar
