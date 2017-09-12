@@ -14,4 +14,4 @@ RUN chmod +x /tmp/start.sh
 RUN chmod +x /tmp/start_spring_boot.sh
 RUN /tmp/install_prereqs.sh
 RUN /tmp/java_install.sh
-ENTRYPOINT "sh /tmp/start.sh" && /bin/bash
+RUN /tmp/start.sh
