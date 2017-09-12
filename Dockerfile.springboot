@@ -5,7 +5,6 @@ ADD ./httpd.sh /tmp/
 ADD ./java_install.sh /tmp/
 ADD ./start.sh /tmp/
 ADD ./start_spring_boot.sh /tmp/
-ADD ./virtual_host.sh /tmp/
 ADD ./weather-app-spring-1.0.0.BUILD-SNAPSHOT-nodb.jar /tmp/
 RUN yum install -y usermode
 RUN useradd -G root ec2-user
