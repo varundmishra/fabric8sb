@@ -1,0 +1,18 @@
+FROM amazonlinux:latest
+ADD ./install_prereqs.sh /tmp/
+ADD ./host_name.sh /tmp/
+ADD ./httpd.sh /tmp/
+ADD ./java_install.sh /tmp/
+ADD ./start.sh /tmp/
+ADD ./start_spring_boot.sh /tmp/
+ADD ./virtual_host.sh /tmp/
+ADD ./weather-app-spring-1.0.0.BUILD-SNAPSHOT-nodb.jar /tmp/
+RUN yum install -y usermode
+RUN useradd -G root ec2-user
+RUN chmod +x /tmp/install_prereqs.sh
+RUN chmod +x /tmp/java_install.sh
+RUN chmod +x /tmp/start.sh
+RUN chmod +x /tmp/start_spring_boot.sh
+RUN /tmp/install_prereqs.sh
+RUN /tmp/java_install.sh
+ENTRYPOINT "sh /tmp/start.sh" && /bin/bash
