@@ -15,4 +15,5 @@ RUN chmod +x /tmp/start_spring_boot.sh
 RUN /tmp/install_prereqs.sh
 RUN /tmp/java_install.sh
 EXPOSE 80
-CMD ["/tmp/start.sh"]
+WORKDIR /tmp/
+CMD ./start.sh
