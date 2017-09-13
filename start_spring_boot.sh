@@ -9,5 +9,3 @@ echo "Printing Logs..."
 sudo chmod 777 /home/ec2-user/nohup.out
 cat /home/ec2-user/nohup.out
 echo "Logs Printed!!!"
-exit
-exit
